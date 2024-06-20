@@ -10,7 +10,8 @@ export default function Leson07() {
 
     let importNum: number = 42
     importNum = -10
-
+    console.log(importNum);
+    
     return (
         <>
             <h1>React Typecsript</h1>
