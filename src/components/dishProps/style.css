@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.divDishProps{
+    padding: 10px;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.divDishProps > li {
+    padding: 10px;
+    width: 500px;
+    background-color: beige;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    box-shadow: 10px 5px 5px rgb(137, 137, 137);
+    border-radius: 10px;
+
+
+}
+
+.divDishProps > li > img {
+    width: 75%;
+    box-shadow: 10px 5px 5px rgb(137, 137, 137);
+    border-radius: 10px;
+}
+
+.divDishProps > li > ol {
+    width: 85%;
+    margin: 4px;
+
+
+}
+
+.divDishProps > li > ol > li{
+    margin: 4px;
+    padding: 1px;
+    width: 100%;
+    background-color: rgb(236, 236, 197);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 10px;
+    gap: 2px;
+
+}
+
+.divDishProps > li > ol > li > p {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.divDishProps > li > button {
+    margin: 5px;
+    background-color: rgb(236, 236, 197);
+    box-shadow: 5px 2px 2px rgb(137, 137, 137);
+    width: 15%;
+    border: transparent;
+    border-radius: 5px;
+    cursor: pointer;
+}

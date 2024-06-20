@@ -1,10 +1,12 @@
 import Input from "../input/Input";
 import MyButton from "../myButton/MyButton";
 import './loginForm.css'
-function LoginForm() {
-    return (
+const LoginForm: React.FC = (): JSX.Element => {
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+    };    return (
         <div>
-            <form type='submit' className="form">
+            <form onSubmit={handleSubmit} className="form">
             <h3>Login form</h3>
                 <div className="loginForm">
                     <div className="inputForm">

@@ -1,6 +1,12 @@
 import './button.css';
 
-function Button({ onClick, buttonText, buttonType }) {  
+interface ButtonProps {
+    onClick: () => void;
+    buttonText: string;
+    buttonType: string;
+}
+
+const Button: React.FC<ButtonProps> = ({ onClick, buttonText, buttonType }) => {  
 
     return (
         <button 

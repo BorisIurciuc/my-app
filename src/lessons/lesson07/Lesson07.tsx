@@ -14,7 +14,7 @@ export default function Lesson07() {
     
     return (
         <>
-            <h2>Lesson 07</h2>
+            <h1>Lesson 07</h1>
             <h2>React Typecsript</h2>
             <p>{user}</p>
             <p>{importNum}</p>

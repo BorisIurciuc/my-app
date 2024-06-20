@@ -16,7 +16,6 @@ function Homework04() {
                 <p>А здесь уже другие данные</p>
                 <a href="https://anabin.kmk.org/anabin.html">ссылка</a>
             </Section>
-            <Section/>
         </div>
     )
 }

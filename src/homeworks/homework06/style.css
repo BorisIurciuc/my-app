@@ -1,0 +1,6 @@
+.divHW06 {
+    background-color: rgb(159, 159, 142);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

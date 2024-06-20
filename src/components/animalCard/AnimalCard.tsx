@@ -1,7 +1,15 @@
 import './animalCard.css'
 
+interface IAnimalProps {
+    animalPropsData:{
+    name: string;
+    species: string;
+    img: string
+    }
+}
 
-function AnimalCard({animalPropsData}) {
+
+const AnimalCard: React.FC<IAnimalProps> = ({animalPropsData}) => {
     return (
         <div className='containerAnimal'>
             <div className='containerAnimalInto'>

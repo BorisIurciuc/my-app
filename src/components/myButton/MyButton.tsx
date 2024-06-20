@@ -1,6 +1,10 @@
 import './myButton.css'
 
-function MyButton({name, type}) {
+interface IButtonProps {
+    name: string;
+    type: 'button' | 'submit' | 'reset';}
+
+function MyButton({name, type}: IButtonProps) {
     return(
         <div>
             <button type={type} className='myButton'>{name}</button>

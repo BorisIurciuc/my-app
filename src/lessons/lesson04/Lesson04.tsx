@@ -8,8 +8,12 @@ function Lesson04() {
             <h1>Lesson 04</h1>
             <AnimalCard animalPropsData={lionData}/>
             <AnimalCard animalPropsData={zebraData}/>
-            <Button buttonText={'first'} buttonType={'button-primary'}/>
-            <Button buttonText={'second'} buttonType={'button-danger'}/>
+            <Button buttonText={'first'} buttonType={'button-primary'} onClick={function (): void {
+                throw new Error('Function not implemented.');
+            } }/>
+            <Button buttonText={'second'} buttonType={'button-danger'} onClick={function (): void {
+                throw new Error('Function not implemented.');
+            } }/>
         </div>
     )
 }
