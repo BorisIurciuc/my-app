@@ -1,0 +1,10 @@
+input{
+    padding: 3px;
+    border-radius: 5px;
+    border: 0.5px solid ;
+}
+
+.labelInput {
+    padding-right: 10px;
+    font-family: 'Courier New', Courier, monospace;
+}

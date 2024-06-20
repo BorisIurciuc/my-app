@@ -1,0 +1,8 @@
+.section {
+    margin: 2px;
+    padding: 5px;
+    border: 1px solid black;
+    width: 50%;
+    background-color: bisque;
+
+}

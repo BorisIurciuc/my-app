@@ -1,4 +1,4 @@
-export default function Leson07() {
+export default function Lesson07() {
 
     
 
@@ -14,7 +14,8 @@ export default function Leson07() {
     
     return (
         <>
-            <h1>React Typecsript</h1>
+            <h2>Lesson 07</h2>
+            <h2>React Typecsript</h2>
             <p>{user}</p>
             <p>{importNum}</p>
         </>
