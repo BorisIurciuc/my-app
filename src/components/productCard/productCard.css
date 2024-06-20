@@ -17,6 +17,7 @@
 
 .containerProduct > h1 {
     color: rgb(230, 227, 227);
+    background-color: transparent;
 }
 
 .containerProductYes {
