@@ -112,5 +112,4 @@ export default function Lesson07() {
             <p>{driver.name} is {driver.role} 🚛</p>
         </>
     );
-  }
-  
+}
