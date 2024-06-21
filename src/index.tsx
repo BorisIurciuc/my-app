@@ -9,6 +9,7 @@ import Homework04 from './homeworks/homework04/Homework04';
 import Homework05 from './homeworks/homework05/Homework05';
 import Lesson06 from './lessons/lesson06/Lesson06';
 import Homework06 from './homeworks/homework06/Homework06';
+import Lesson08 from './lessons/lesson08/Lesson08';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -20,6 +21,7 @@ root.render(
     <Lesson05 />
     <Lesson06 />
     <Lesson07 />
+    <Lesson08 />
     <Homework03 />
     <Homework04 />
     <Homework05 />
