@@ -1,37 +1,33 @@
 import { v4 } from 'uuid';
 
-interface BrotherProps {
-
-}
-
-interface Brother {
+interface IBrother {
+    id: number;
     name: string;
     race: string;
-    id: number;
     image: string;
     skills: string[];
 }
 
-export default function brotherPropCard({ brotherProp, setBrothers }: { brotherProp: Brother, setBrothers: React.Dispatch<React.SetStateAction<Brother[]>> }) {
-    // rest of the code...
+export default function BrotherCard({brotherProp, setBrothers}: {brotherProp: IBrother, setBrothers: React.Dispatch<React.SetStateAction<IBrother[]>>}) {
 
-
-
-    const delBrother = (id: number) => {
-        setBrothers(prev => prev.filter(brother => brother.id !== id))
+    const deleteCard = (id: number): void => {
+        setBrothers(el => el.filter(brother => brother.id !== id))
     }
-    return (
+
+    return(
         <div>
-            <h2>{brotherProp.name}</h2>
-            <p>race: {brotherProp.race}</p>
-            <p>brother id: {brotherProp.id}</p>
-            <ol>
-                {brotherProp.skills.map(skill => (
-                    <li key={v4()}>{skill}</li>
-            ))}
-            </ol>
+            <h3>{brotherProp.name}</h3>
             <img src={brotherProp.image} alt="" />
-            <button onClick={() => delBrother(brotherProp.id)}>delete</button>
+            <p>{brotherProp.race}</p>
+            <ul>
+                {brotherProp.skills.map(skill => (
+                    <li key={v4()}>
+                        {skill}
+                    </li>
+                ))}
+            </ul>
+            <button onClick={() => deleteCard(brotherProp.id)}>delete</button>
+            
         </div>
-    );
+    )
 }
