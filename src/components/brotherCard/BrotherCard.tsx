@@ -10,8 +10,12 @@ interface IBrother {
     image: string;
     skills: string[];
 }
+interface IBrotherComplex {
+    brotherProp: IBrother;
+    setBrothers: React.Dispatch<React.SetStateAction<IBrother[]>>;
+}
 
-export default function BrotherCard({brotherProp, setBrothers}: {brotherProp: IBrother, setBrothers: React.Dispatch<React.SetStateAction<IBrother[]>>}) {
+export default function BrotherCard({ brotherProp, setBrothers }: IBrotherComplex) {
 
   // -----------------------------Button delete-----------------------
   const deleteCard = (id: number): void => {
@@ -31,7 +35,7 @@ export default function BrotherCard({brotherProp, setBrothers}: {brotherProp: IB
     return(
         <div className='div-brotherCard'>
             <h3>{brotherProp.name}</h3>
-            <img src={brotherProp.image} alt="" />
+            <img src={brotherProp.image} alt={brotherProp.name} />
             <p>{brotherProp.race}</p>
             <ul>
                 {brotherProp.skills.map(skill => (
