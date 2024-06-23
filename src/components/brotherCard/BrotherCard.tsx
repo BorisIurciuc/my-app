@@ -2,6 +2,8 @@ import { v4 } from 'uuid';
 import Button from '../button/Button';
 import { useState } from 'react';
 import './brotherCard.css'
+import ThumbUpOutlinedIcon from '@mui/icons-material/ThumbUpOutlined';
+import ThumbDownOffAltOutlinedIcon from '@mui/icons-material/ThumbDownOffAltOutlined';
 
 interface IBrother {
     id: number;
@@ -47,10 +49,10 @@ export default function BrotherCard({ brotherProp, setBrothers }: IBrotherComple
             <div className="div-feedback">
                 <h4>Your feedback </h4>
                 <div>
-                    <Button onClick={addLike} buttonText={"like"}buttonType={"button-primary"}/>
-                    <h3>{like}</h3>
-                    <Button onClick={addDislike} buttonText={"dislike"} buttonType={"button-danger"}/>
-                    <h3>{dislike}</h3>
+                <Button onClick={() => addLike()} buttonType={'button-primary'} icon={<ThumbUpOutlinedIcon />} />
+                    {like}
+                <Button onClick={() => addDislike()} buttonType={'button-danger'} icon={<ThumbDownOffAltOutlinedIcon />} />
+                    {dislike}
                 </div>
             </div>
             <Button onClick={() => deleteCard(brotherProp.id)} buttonText={"delete"} buttonType={"neutral"}/>

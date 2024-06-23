@@ -1,16 +1,19 @@
+import { ReactNode } from 'react';
 import './button.css';
 
 interface IButtonProps {
     onClick: () => void;
-    buttonText: string;
+    buttonText?: string;
     buttonType: string;
+    icon?: ReactNode;
 }
 
-function Button({onClick, buttonText, buttonType}: IButtonProps) {  
+function Button({onClick, buttonText, buttonType, icon}: IButtonProps) {  
 
     return (
         <button onClick={onClick} className={`button ${buttonType}`}>
-            {buttonText}
+            {icon && <span className="icon">{icon}</span> }
+            {buttonText && <span className='text'>{buttonText}</span>}
         </button>
     );
 }
