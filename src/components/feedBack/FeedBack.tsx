@@ -22,7 +22,7 @@ export default function FeedBack() {
             <h3>Feedback form</h3>
             <div className="containerLike">
                 <Button onClick={addLike} buttonText={'like'} buttonType={'button-primary'}/>
-                <h2>{like}</h2> 
+                <h3>{like}</h3> 
             </div>
             <div className="containerLike">
                 <Button onClick={addDislike} buttonText={'dislike'} buttonType={'button-danger'}/>
