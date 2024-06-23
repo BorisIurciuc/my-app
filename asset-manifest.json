@@ -1,14 +1,13 @@
 {
   "files": {
-    "main.css": "./static/css/main.fada1fdd.css",
-    "main.js": "./static/js/main.a000fe0a.js",
-    "static/media/Ferrari-facts-Cover-25-02-420x230.jpg": "./static/media/Ferrari-facts-Cover-25-02-420x230.e391864ddf7f03e192b0.jpg",
+    "main.css": "./static/css/main.2e083436.css",
+    "main.js": "./static/js/main.f0c26b53.js",
     "index.html": "./index.html",
-    "main.fada1fdd.css.map": "./static/css/main.fada1fdd.css.map",
-    "main.a000fe0a.js.map": "./static/js/main.a000fe0a.js.map"
+    "main.2e083436.css.map": "./static/css/main.2e083436.css.map",
+    "main.f0c26b53.js.map": "./static/js/main.f0c26b53.js.map"
   },
   "entrypoints": [
-    "static/css/main.fada1fdd.css",
-    "static/js/main.a000fe0a.js"
+    "static/css/main.2e083436.css",
+    "static/js/main.f0c26b53.js"
   ]
 }
