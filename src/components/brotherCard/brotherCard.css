@@ -2,7 +2,7 @@
 .div-brotherCard{
     margin: 5px;
     width: 600px;
-    background-color: rgb(225, 227, 201);
+    background-color: rgba(225, 227, 201, 0.637);
     border: 10px solid rgb(199, 189, 49);
     box-shadow: 10px 10px 10px rgb(69, 69, 66);
     display: flex;
