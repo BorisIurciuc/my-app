@@ -1,38 +1,36 @@
-import React from 'react';
-import { v4 as uuidv4 } from 'uuid';
+import { v4 } from 'uuid';
+
+interface BrotherProps {
+
+}
 
 interface Brother {
     name: string;
     race: string;
-    id: number;
     image: string;
     skills: string[];
 }
 
-interface BrotherPropCardProps {
-    brotherProp: Brother;
-    setBrothers: React.Dispatch<React.SetStateAction<Brother[]>>;
-}
+export default function brotherPropCard({ brotherProp, setBrothers }: { brotherProp: Brother, setBrothers: React.Dispatch<React.SetStateAction<Brother[]>> }) {
+    // rest of the code...
 
-const BrotherPropCard: React.FC<BrotherPropCardProps> = ({ brotherProp, setBrothers }) => {
+
+
     const delBrother = (id: number) => {
-        setBrothers(prev => prev.filter(brother => brother.id !== id));
-    };
-
+        setBrothers(prev => prev.filter(brother => brother.id !== id))
+    }
     return (
         <div>
             <h2>{brotherProp.name}</h2>
-            <p>Race: {brotherProp.race}</p>
-            <p>Brother ID: {brotherProp.id}</p>
+            <p>race: {brotherProp.race}</p>
+            <p>brother id: {brotherProp.id}</p>
             <ol>
                 {brotherProp.skills.map(skill => (
-                    <li key={uuidv4()}>{skill}</li>
-                ))}
+                    <li key={v4()}>{skill}</li>
+            ))}
             </ol>
-            <img src={brotherProp.image} alt={`${brotherProp.name}'s`} />
-            <button onClick={() => delBrother(brotherProp.id)}>Delete</button>
+            <img src={brotherProp.image} alt="" />
+            <button onClick={() => delBrother(brotherProp.id)}>delete</button>
         </div>
     );
-};
-
-export default BrotherPropCard;
+}
