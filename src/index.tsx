@@ -1,13 +1,12 @@
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import Homework08 from './homeworks/homework08/Homework08';
+import Lesson09 from './lessons/lesson09/Lesson09';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <>
-    <Homework08 />
-    
+    <Lesson09 />
   </>
 );

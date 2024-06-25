@@ -1,14 +1,18 @@
-import './myButton.css'
+import { ReactNode } from "react";
+import style from './myButton.module.css'
+interface IMyButtonProps {
+  onClick?: () => void;
+  buttonText?: string;
+  buttonType: string;
+  icon?: ReactNode;
+}
 
-interface IButtonProps {
-    name: string;
-    type: 'button' | 'submit' | 'reset';}
-
-function MyButton({name, type}: IButtonProps) {
-    return(
-        <div>
-            <button type={type} className='myButton'>{name}</button>
-        </div>
-    )
+function MyButton({ onClick, buttonText, buttonType, icon }: IMyButtonProps) {
+  return (
+    <button onClick={onClick} className={`${style.button} ${style[buttonType]}`}>
+      {icon && <span className={style.icon}>{icon}</span>}
+      {buttonText && <span className={style.text}>{buttonText}</span>}
+    </button>
+  );
 }
 export default MyButton;

@@ -1,9 +1,9 @@
 import { v4 } from 'uuid';
-import Button from '../button/Button';
 import { useState } from 'react';
 import './brotherCard.css'
 import ThumbUpOutlinedIcon from '@mui/icons-material/ThumbUpOutlined';
 import ThumbDownOffAltOutlinedIcon from '@mui/icons-material/ThumbDownOffAltOutlined';
+import MyButton from '../myButton/MyButton';
 
 interface IBrother {
     id: number;
@@ -35,7 +35,7 @@ export default function BrotherCard({ brotherProp, setBrothers }: IBrotherComple
   };
 
     return(
-        <div className='div-brotherCard'>
+        <div className='divBrotherCard'>
             <h3>{brotherProp.name}</h3>
             <img src={brotherProp.image} alt={brotherProp.name} />
             <p>{brotherProp.race}</p>
@@ -46,16 +46,16 @@ export default function BrotherCard({ brotherProp, setBrothers }: IBrotherComple
                     </li>
                 ))}
             </ul>
-            <div className="div-feedback">
+            <div className="divFeedback">
                 <h4>Your feedback </h4>
                 <div>
-                <Button onClick={() => addLike()} buttonType={'button-primary'} icon={<ThumbUpOutlinedIcon />} />
+                <MyButton onClick={() => addLike()} buttonType={'buttonPrimary'} icon={<ThumbUpOutlinedIcon />} />
                     {like}
-                <Button onClick={() => addDislike()} buttonType={'button-danger'} icon={<ThumbDownOffAltOutlinedIcon />} />
+                <MyButton onClick={() => addDislike()} buttonType={'buttonDanger'} icon={<ThumbDownOffAltOutlinedIcon />} />
                     {dislike}
                 </div>
             </div>
-            <Button onClick={() => deleteCard(brotherProp.id)} buttonText={"delete"} buttonType={"neutral"}/>
+            <MyButton onClick={() => deleteCard(brotherProp.id)} buttonText={"delete"} buttonType={"neutral"}/>
         </div>
     )
 }

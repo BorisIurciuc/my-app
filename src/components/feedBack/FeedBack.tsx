@@ -1,6 +1,6 @@
 import { useState } from "react"
-import Button from "../button/Button";
 import './feedBack.css'
+import MyButton from "../myButton/MyButton";
 
 export default function FeedBack() {
     const [like, setLike] = useState(0);
@@ -21,14 +21,14 @@ export default function FeedBack() {
         <div className="containerFeedBack">
             <h3>Feedback form</h3>
             <div className="containerLike">
-                <Button onClick={addLike} buttonText={'like'} buttonType={'button-primary'}/>
+                <MyButton onClick={addLike} buttonText={'like'} buttonType={'button-primary'}/>
                 <h3>{like}</h3> 
             </div>
             <div className="containerLike">
-                <Button onClick={addDislike} buttonText={'dislike'} buttonType={'button-danger'}/>
+                <MyButton onClick={addDislike} buttonText={'dislike'} buttonType={'button-danger'}/>
                 <h2>{dislike}</h2> 
             </div>
-            <Button onClick={reserResulta} buttonText={'reset'}  buttonType={'neutral'}/>
+            <MyButton onClick={reserResulta} buttonText={'reset'}  buttonType={'neutral'}/>
         </div>
     )
 }

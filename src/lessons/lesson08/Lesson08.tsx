@@ -13,6 +13,12 @@ const Lesson08 = () => {
   const age: MyArray<number> = [25, 12, 6];
   console.log(age);
 
+  function getFirst<T>(arr: T[]): T {
+    return arr[0];
+  }
+
+  getFirst(fruits);
+
   // type Sum<T> = () => T
   enum Season {
     spring = "Spring",
