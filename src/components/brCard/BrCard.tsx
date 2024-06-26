@@ -1,5 +1,5 @@
 import { v4 } from 'uuid';
-import { IBrother } from '../../homeworks/homewor0802/type';
+import { IBrother } from '../../homeworks/homework08_02/type';
 import { Dispatch, SetStateAction } from 'react';
 interface IBrotherProps {
     brotherProp: IBrother

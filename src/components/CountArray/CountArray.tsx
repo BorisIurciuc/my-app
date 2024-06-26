@@ -1,6 +1,5 @@
 import { useState } from "react"
-import './counnterArray.css'
-
+import styles from './counnterArray.module.css'
 export default function CountArray() {
 
     const [arr, setArr] = useState<string[]>([]);
@@ -14,7 +13,7 @@ export default function CountArray() {
         setArr(arr.slice(0, arr.length - 1))
     }
     return (
-        <div className="counterArr">
+        <div className={styles.counterArr}>
             <h3>Count array</h3>
             <button onClick={addItem}> item</button>
             <ul>

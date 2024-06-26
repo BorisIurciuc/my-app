@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import dishData from "./dishData";
 import DishProps from "../dishProps/DishProps";
-import './dishes.css';
-
+import styles from './dishes.module.css'
 interface IIngredient {
     id: number;
     name: string;
@@ -29,7 +28,7 @@ const Dishes: React.FC = () => {
     }
 
     return (
-        <div className="divDishes">
+        <div className={styles.divDishes}>
             <h2>Suggested dishes recipes</h2>
             <DishProps dishes={dishes} removeDish={removeDish} />
         </div>

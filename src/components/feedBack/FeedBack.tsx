@@ -1,5 +1,5 @@
 import { useState } from "react"
-import './feedBack.css'
+import styles from './feedBack.module.css'
 import MyButton from "../myButton/MyButton";
 
 export default function FeedBack() {
@@ -18,14 +18,14 @@ export default function FeedBack() {
     }
 
     return (
-        <div className="containerFeedBack">
+        <div className={styles.containerFeedBack}>
             <h3>Feedback form</h3>
-            <div className="containerLike">
-                <MyButton onClick={addLike} buttonText={'like'} buttonType={'button-primary'}/>
+            <div className={styles.containerLike}>
+                <MyButton onClick={addLike} buttonText={'like'} buttonType={'buttonPrimary'}/>
                 <h3>{like}</h3> 
             </div>
-            <div className="containerLike">
-                <MyButton onClick={addDislike} buttonText={'dislike'} buttonType={'button-danger'}/>
+            <div className={styles.containerLike}>
+                <MyButton onClick={addDislike} buttonText={'dislike'} buttonType={'buttonDanger'}/>
                 <h2>{dislike}</h2> 
             </div>
             <MyButton onClick={reserResulta} buttonText={'reset'}  buttonType={'neutral'}/>

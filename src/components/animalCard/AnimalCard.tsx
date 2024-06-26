@@ -1,5 +1,4 @@
-import './animalCard.css'
-
+import styles from './animalCard.module.css'
 interface IAnimalProps {
     animalPropsData:{
     name: string;
@@ -11,7 +10,7 @@ interface IAnimalProps {
 
 const AnimalCard: React.FC<IAnimalProps> = ({animalPropsData}) => {
     return (
-        <div className='containerAnimal'>
+        <div className={styles.containerAnimal}>
             <div className='containerAnimalInto'>
 
             <h3>AnimalCard</h3>

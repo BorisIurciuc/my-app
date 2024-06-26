@@ -1,5 +1,5 @@
 import React from 'react';
-import './style.css';
+import styles from './style.module.css'
 
 interface Ingredient {
     id: number;
@@ -22,14 +22,14 @@ interface IDishProps {
 
 const DishProps: React.FC<IDishProps> = ({ dishes, removeDish }) => {
     return (
-        <div className="divDishProps">
+        <div className={styles.divDishProps}>
             {dishes.map(dish => (
                 <li key={dish.id}>
                     <h3>{dish.name}</h3>
                     <p>{dish.description}</p>
                     <img src={dish.image} alt={dish.name} />
                     Ingredients:
-                    <ol className="ingredient">
+                    <ol className={styles.ingredient}>
                         {dish.ingredients.map(ingredient => (
                             <li key={ingredient.id}>
                                 <p>{ingredient.name}</p>

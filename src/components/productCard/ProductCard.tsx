@@ -1,4 +1,4 @@
-import './productCard.css'
+import styles from './productCard.module.css'
 
 function ProductCard(){
     const productData = {
@@ -11,13 +11,13 @@ function ProductCard(){
         }
 
     return (
-        <div className="containerProduct">
+        <div className={styles.containerProduct}>
             <h1>Наши предложения</h1>
             <div className={productData.availability ? 'containerProductYes' : 'containerProductNo'}>
                 <h2>{productData.cardTitle}</h2>
-                <img src={productData.cardImage} className='imgProduct' alt="ferrari"/>
+                <img src={productData.cardImage} className={styles.imgProduct} alt="ferrari"/>
                 <h4>{productData.cardDescription}</h4>
-                <p className='descriptionProd'>
+                <p className={styles.descriptionProd}>
                     Позвольте себе ощутить неподдельный восторг от вождения с Ferrari 296 GTB — автомобилем, 
                     который воплощает в себе сочетание роскоши, инноваций и невероятной динамики.
                     <br />Инновации и мощь
@@ -27,7 +27,7 @@ function ProductCard(){
                     <br /><b><span>Ваше будущее начинается сейчас.</span></b>
                 </p >
             </div>
-            <div className='availability'>
+            <div className={styles.availability}>
                 <b><p className={productData.availability ? 'textBlack' : 'textRed'}>
                     {productData.availability ? productData.thereIs : productData.thereNot}
                 </p></b>

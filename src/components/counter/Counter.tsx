@@ -1,7 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import './counter.css'
-
+import styles from './counter.module.css'
 function Lesson05 () {
     
     const [count, setCount] = useState(0);
@@ -13,7 +12,7 @@ function Lesson05 () {
     }
 
     return (
-        <div className="counter">
+        <div className={styles.counter}>
             <h5>Counter with useState hook:</h5>
             <p>{count}</p>
             <button onClick={countPlus}>Plus</button>
