@@ -1,7 +1,8 @@
+import { ReactNode } from 'react';
 import styles from './section.module.css'
 
 interface ISection {
-    children: string;
+    children: ReactNode;
     title: string
 }
 

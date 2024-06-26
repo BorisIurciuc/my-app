@@ -1,5 +1,7 @@
+import BrCard from '../../components/brCard/BrCard';
 import ButtonStyledComponent, { StyledButton } from '../../components/buttonStyleComponent/ButtonStyleComponent';
 import LoginForm from '../../components/loginForm/LoginForm';
+import BrotherHood from '../../homeworks/homework08_02/brotherhood/Bratherhood';
 import styles from "./lesson09.module.css"
 
 
@@ -13,6 +15,7 @@ export default function Lesson09() {
             <LoginForm />
         {/* <Button isGetButton={true} /> */}
         {/* <BrotherHood /> */}
+        <BrotherHood />
         </div>
     );
 }

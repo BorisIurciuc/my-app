@@ -2,24 +2,31 @@ import { FormEvent } from 'react';
 import styles from './button.module.css'
 
 //добавили interface props
-// которые просил добавить ts для безопасности
 interface IButtonProps {
   isGetButton?: boolean;
-  // buttonText необязательный пропс, указан через оператор '?'
-  buttonText?: string;
-  // типизируем props с функцией без return
-  onButtonClick?: () => void;
+  buttonText?: string;            
+  onButtonClick?: () => void;      
   buttonType?: 'button' | 'submit' | 'reset';
   onSubmit?:(e: FormEvent<HTMLButtonElement>) => void;
+  disabled?: boolean;
 }
-function Button({ buttonText = 'push', isGetButton = true, onButtonClick, onSubmit, buttonType = 'button' }: IButtonProps) {
+function Button({ 
+  buttonText = 'push', 
+  // isGetButton = false, 
+  onButtonClick, 
+  onSubmit, 
+  buttonType = 'button', 
+  disabled = true
+}: IButtonProps
+){
 
   return (
     <button
       type={buttonType}
       onSubmit={onSubmit}
       onClick={onButtonClick}
-      className={`${styles.button} ${isGetButton ? styles.buttonDanger : styles.buttonPrimary}`}
+      // className={`${styles.button} ${isGetButton ? styles.buttonDanger : styles.buttonPrimary}`}
+      className={`${styles.button}  ${disabled ? styles.buttonDisabled : styles.buttonActiv} `}
     >
       {buttonText}
     </button>
