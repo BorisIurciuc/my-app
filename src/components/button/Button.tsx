@@ -12,7 +12,6 @@ interface IButtonProps {
 }
 function Button({ 
   buttonText = 'push', 
-  // isGetButton = false, 
   onButtonClick, 
   onSubmit, 
   buttonType = 'button', 
@@ -25,9 +24,7 @@ function Button({
       type={buttonType}
       onSubmit={onSubmit}
       onClick={onButtonClick}
-      // className={`${styles.button} ${isGetButton ? styles.buttonDanger : styles.buttonPrimary}`}
-      className={`${styles.button}  ${disabled ? styles.buttonDisabled : styles.buttonActiv} `}
-    >
+      className={`${styles.button}  ${disabled ? styles.buttonDisabled : styles.buttonActiv} `}>
       {buttonText}
     </button>
   );

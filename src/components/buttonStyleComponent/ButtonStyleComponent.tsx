@@ -1,25 +1,20 @@
-import styled from '@emotion/styled';
+import styled from "@emotion/styled";
 
-interface ButtonProps {
-  primary?: boolean;
-}
-
-export const StyledButton = styled.button<ButtonProps>`
+export const StyleButton = styled.button`
   border: none;
   align-self: center;
-  border-radius: 3px;
-  background-color: ${(props) => props.primary ? '#ab25ff' : '#ff9925'}  ;
+  border-radius: 5px;
+  background-color: orange;
   padding: 3px;
   cursor: pointer;
   margin: 2px;
   :hover {
-    background-color: #6363f8;
+    background-color: blanchedalmond;
   }
 `;
 
-
 export default function ButtonStyledComponent() {
   return (
-    <StyledButton primary={true} >button</StyledButton>
-  );
+    <StyleButton>but</StyleButton>
+  )
 }
