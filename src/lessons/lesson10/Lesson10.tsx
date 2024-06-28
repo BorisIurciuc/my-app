@@ -53,7 +53,7 @@ const Lesson10 = () => {
           <span onClick={changeToggleVer}>≡</span>
         </div>
       </header>
-)}
+      )}
         {headerVer && (
             <header className={styles.headerVert}>
         <div>
@@ -62,7 +62,7 @@ const Lesson10 = () => {
           <a href="/">Profile</a>
         </div>
       </header>
-)}
+      )}
 
       {/* если toggle true - мы покажем элемент на странице - если false спрячем */}
 
