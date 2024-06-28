@@ -21,6 +21,7 @@
   
   .header a {
     color: black;
+    text-decoration: none;
     margin-right: 10px;
   }
   
@@ -34,7 +35,7 @@
     color: grey;
   }
   
-  /* эти стили начнут срабатывать не устройствах меньше 320px */
+  /* эти стили начнут срабатывать не устройствах меньше 700px */
   
   .headerVert > div{
     display: none;
@@ -49,14 +50,22 @@
   
     .header {
       background-color: lightblue;
+      color: rgb(29, 8, 100);
+
     }
+    a {
+      text-decoration: none;
+      margin: 10px;
+    }
+
     .header a {
       display: none;
     }
 
     .headerVert{
       position: absolute;
-      top: 80px; left: 570px;
+      top: 80px; 
+      right: 0;
       width: 100px;
       background-color: rgb(201, 238, 238);
     }
