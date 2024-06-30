@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import styles from "./lesson1002.module.css";
 import { v4 } from "uuid";
 import Button from "../../components/button/Button";
+import MyHeader from "../../components/myHeader/MyHeader";
 
 interface ICat {
   fact: string;
@@ -42,6 +43,8 @@ export default function Lesson1002() {
   }, []);
 
   return (
+    <>
+    <MyHeader />
     <section className={styles.mainSection}>
       <div className={styles.container1002}>
       <h1>Lesson1002</h1>
@@ -56,7 +59,6 @@ export default function Lesson1002() {
               ))}
             </ul>
             <ol>
-              {(isLoading || imgCat.length === 0) && <h3>is loading</h3>}
               {imgCat.map((el) => (
                 <li key={v4()}>
                   <img src={el.url} alt={"cat"} />
@@ -76,6 +78,7 @@ export default function Lesson1002() {
 
       </div>
     </section>
+    </>
   );
 }
 
