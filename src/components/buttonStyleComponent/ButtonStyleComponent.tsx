@@ -15,6 +15,6 @@ export const StyleButton = styled.button`
 
 export default function ButtonStyledComponent() {
   return (
-    <StyleButton>but</StyleButton>
+    <StyleButton>button</StyleButton>
   )
 }
