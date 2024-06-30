@@ -3,6 +3,7 @@ import styles from "./lesson1002.module.css";
 import { v4 } from "uuid";
 import Button from "../../components/button/Button";
 import MyHeader from "../../components/myHeader/MyHeader";
+import MyCatFactInputForm from "../../components/myCatFactInputForm/MyCatFactInputForm";
 
 interface ICat {
   fact: string;
@@ -16,6 +17,7 @@ export default function Lesson1002() {
   const [factCat, setFactCat] = useState<ICat[]>([]);
   const [imgCat, setImgCat] = useState<IImgCat[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [isActivFormBtn, setIsActivFormBtn] = useState<boolean>(false)
 
   async function getInfoCat() {
     setIsLoading(true);
@@ -41,6 +43,10 @@ export default function Lesson1002() {
     getInfoCat();
     getImageCat();
   }, []);
+
+  function changeToggleFormBtn() {
+    setIsActivFormBtn(prev => !prev)
+  }
 
   return (
     <>
@@ -73,7 +79,7 @@ export default function Lesson1002() {
                 getInfoCat();
                 getImageCat();
               }}
-              buttonText={"New fact"}
+              buttonText={"Get new fact"}
               disabled={false}
             />
             <Button
@@ -81,17 +87,20 @@ export default function Lesson1002() {
               buttonText={"Reset facts"}
               disabled={true}
             />
+            <Button
+              onButtonClick={changeToggleFormBtn}
+              buttonText={"Add new fact"}
+              disabled={false}
+            />
           </div>
+          <div className={styles.factInputForm}>
+            {isActivFormBtn && <MyCatFactInputForm />}
+          </div>
+          
+
         </div>
       </section>
     </>
   );
 }
 
-/* <> 
-{setTimeout(() => {
-<h1>wait</h1>
-}, 3000)}
-<h3>is loading</h3>
-<div className={styles.loader}></div>
-</> */

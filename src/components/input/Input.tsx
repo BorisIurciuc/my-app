@@ -19,7 +19,7 @@ function Input({ name, type, placeholder, label }: IInputProps) {
         name={name}
         type={type}
         placeholder={placeholder}
-        className="input"
+        className={styles.input}
       />
     </div>
   );
