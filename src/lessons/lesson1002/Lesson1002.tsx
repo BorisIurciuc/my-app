@@ -33,6 +33,7 @@ export default function Lesson1002() {
 
   const resetCatCard = () => {
     setFactCat([]);
+    setImgCat([]);
   };
 
   useEffect(() => {
@@ -41,34 +42,40 @@ export default function Lesson1002() {
   }, []);
 
   return (
-    <div className={styles.container1002}>
+    <section className={styles.mainSection}>
+      <div className={styles.container1002}>
       <h1>Lesson1002</h1>
-      <Button
-        onButtonClick={() => { getInfoCat(); getImageCat(); }}
-        buttonText={'fact'}
-        disabled={false}
-      />
-      <Button onButtonClick={resetCatCard} buttonText={'reset'} disabled={true}/>
-      {(isLoading || imgCat.length === 0) && <h3>is loading</h3>}
-      {(!isLoading || imgCat.length > 0) && (
-        <>
-          <ul>
-            {factCat.map((el) => (
-              <li key={v4()}>
-                <p>{el.fact}</p>
-              </li>
-            ))}
-          </ul>
-          <ol>
-            {imgCat.map((el) => (
-              <li key={v4()}>
-                <img src={el.url} alt={"cat"} />
-              </li>
-            ))}
-          </ol>
-        </>
-      )}
-    </div>
+        {isLoading && <div className={styles.loader}></div>}
+        {(!isLoading || imgCat.length > 0) && (
+          <div className={styles.containerFactImageCat}>
+            <ul>
+              {factCat.map((el) => (
+                <li key={v4()}>
+                  <p>{el.fact}</p>
+                </li>
+              ))}
+            </ul>
+            <ol>
+              {(isLoading || imgCat.length === 0) && <h3>is loading</h3>}
+              {imgCat.map((el) => (
+                <li key={v4()}>
+                  <img src={el.url} alt={"cat"} />
+                </li>
+              ))}
+            </ol>
+          </div>
+        )}
+        <div className={styles.containerButtons}>
+          <Button
+            onButtonClick={() => { getInfoCat(); getImageCat(); }}
+            buttonText={'New fact'}
+            disabled={false}
+          />
+          <Button onButtonClick={resetCatCard} buttonText={'Reset facts'} disabled={true}/>
+        </div>
+
+      </div>
+    </section>
   );
 }
 
