@@ -44,50 +44,54 @@ export default function Lesson1002() {
 
   return (
     <>
-    <MyHeader />
-    <section className={styles.mainSection}>
-      <div className={styles.container1002}>
-      <h1>Lesson1002</h1>
-        {isLoading && <div className={styles.loader}></div>}
-        {(!isLoading || imgCat.length > 0) && (
-          <div className={styles.containerFactImageCat}>
-            <ul>
-              {factCat.map((el) => (
-                <li key={v4()}>
-                  <p>{el.fact}</p>
-                </li>
-              ))}
-            </ul>
-            <ol>
-              {imgCat.map((el) => (
-                <li key={v4()}>
-                  <img src={el.url} alt={"cat"} />
-                </li>
-              ))}
-            </ol>
+      <MyHeader />
+      <section className={styles.mainSection}>
+        <div className={styles.container1002}>
+          <h1>Lesson1002</h1>
+          {isLoading && <div className={styles.loader}></div>}
+          {(!isLoading || imgCat.length > 0) && (
+            <div className={styles.containerFactImageCat}>
+              <ul>
+                {factCat.map((el) => (
+                  <li key={v4()}>
+                    <p>{el.fact}</p>
+                  </li>
+                ))}
+              </ul>
+              <ol>
+                {imgCat.map((el) => (
+                  <li key={v4()}>
+                    <img src={el.url} alt={"cat"} />
+                  </li>
+                ))}
+              </ol>
+            </div>
+          )}
+          <div className={styles.containerButtons}>
+            <Button
+              onButtonClick={() => {
+                getInfoCat();
+                getImageCat();
+              }}
+              buttonText={"New fact"}
+              disabled={false}
+            />
+            <Button
+              onButtonClick={resetCatCard}
+              buttonText={"Reset facts"}
+              disabled={true}
+            />
           </div>
-        )}
-        <div className={styles.containerButtons}>
-          <Button
-            onButtonClick={() => { getInfoCat(); getImageCat(); }}
-            buttonText={'New fact'}
-            disabled={false}
-          />
-          <Button onButtonClick={resetCatCard} buttonText={'Reset facts'} disabled={true}/>
         </div>
-
-      </div>
-    </section>
+      </section>
     </>
   );
 }
 
-
-  /* <> 
+/* <> 
 {setTimeout(() => {
 <h1>wait</h1>
 }, 3000)}
 <h3>is loading</h3>
 <div className={styles.loader}></div>
 </> */
-

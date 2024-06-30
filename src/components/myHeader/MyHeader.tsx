@@ -1,41 +1,39 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
-import styles from './myHeader.module.css';
+import styles from "./myHeader.module.css";
 
 const MyHeader = () => {
-  const [headerHor] = useState<boolean>(true);
-  const [headerVer, setHeaderVer] = useState<boolean>(false);
+    const [headerHor] = useState<boolean>(true);
+    const [headerVer, setHeaderVer] = useState<boolean>(false);
 
+    const changeToggleVer = () => {
+        setHeaderVer((prev) => !prev);
+    };
 
-  const changeToggleVer = () => {
-    setHeaderVer((prev) => !prev);
-  };
-
-  return (
-    <div>
-        {headerHor && (
-      <header className={styles.header}>
-        <h3>Lesson10</h3>
+    return (
         <div>
-          <a href="/">Home</a>
-          <a href="/">Info</a>
-          <a href="/">Profile</a>
-          <span onClick={changeToggleVer}>≡</span>
-        </div>
-      </header>
-      )}
-        {headerVer && (
+            {headerHor && (
+                <header className={styles.header}>
+                {/* <h3>Lesson10</h3> */}
+                <div>
+                    <a href="/">Home</a>
+                    <a href="/">Info</a>
+                    <a href="/">Profile</a>
+                    <span onClick={changeToggleVer}>≡</span>
+                </div>
+                </header>
+            )}
+            {headerVer && (
             <header className={styles.headerVert}>
-        <div>
-          <a href="/">Home</a>
-          <a href="/">Info</a>
-          <a href="/">Profile</a>
+                <div>
+                    <a href="/">Home</a>
+                    <a href="/">Info</a>
+                    <a href="/">Profile</a>
+                    </div>
+                </header>
+            )}
         </div>
-      </header>
-      )}
-
-    </div>
-  );
+    );
 };
 
 export default MyHeader;
