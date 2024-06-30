@@ -17,7 +17,7 @@ export default function Lesson1002() {
   const [factCat, setFactCat] = useState<ICat[]>([]);
   const [imgCat, setImgCat] = useState<IImgCat[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(false);
-  const [isActivFormBtn, setIsActivFormBtn] = useState<boolean>(false)
+  const [isActivFormBtn, setIsActivFormBtn] = useState<boolean>(false);
 
   async function getInfoCat() {
     setIsLoading(true);
@@ -45,7 +45,7 @@ export default function Lesson1002() {
   }, []);
 
   function changeToggleFormBtn() {
-    setIsActivFormBtn(prev => !prev)
+    setIsActivFormBtn((prev) => !prev);
   }
 
   return (
@@ -96,11 +96,8 @@ export default function Lesson1002() {
           <div className={styles.factInputForm}>
             {isActivFormBtn && <MyCatFactInputForm />}
           </div>
-          
-
         </div>
       </section>
     </>
   );
 }
-
