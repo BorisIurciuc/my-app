@@ -1,0 +1,17 @@
+.container{
+    border: 1px solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 300px;
+    border-radius: 10px;
+    background-color: beige;
+}
+.container > input {
+    margin-bottom: 3px;
+}
+
+/* .container > button {
+    padding: 10px;
+} */
