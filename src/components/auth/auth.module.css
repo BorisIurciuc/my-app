@@ -1,0 +1,17 @@
+.container {
+    width: 360px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    background-color: beige;
+}
+
+.container > form {
+    border: 1px solid;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    background-color: beige;
+    gap: 10px;
+
+}

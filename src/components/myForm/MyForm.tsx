@@ -11,9 +11,7 @@ interface IFormValues {
 }
 
 const MyForm: FC = () => {
-  const schema = Yup
-    .object()
-    .shape({
+  const schema = Yup.object().shape({
     firstName: Yup
         .string()
         .required("firstname is requered "),
