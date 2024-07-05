@@ -18,7 +18,7 @@ interface IUserData {
     email: string;
 }
 
-const initial = {
+const initial: IUserData = {
     id: 0,
     gender: '',
     username: '',
@@ -70,7 +70,8 @@ export const Auth = () => {
     })
 
   return (
-    <div className={styles.container}>Auth2
+    <div className={styles.container}>
+        <h3>Authentication</h3>
         <p>emilys, emilyspass</p>
         <form onSubmit={formik.handleSubmit}>
             <input 
@@ -86,15 +87,13 @@ export const Auth = () => {
                 id='password'
                 onChange={formik.handleChange}
                 value={formik.values.password}
-
             />
             <Button buttonType="submit" buttonText="send" disabled={false} />
             </form>
-        <div>
+        <div className={styles.output}>
             <p>{userData.username}</p>
             <p>{userData.firstName}</p>
-            <img src={userData.image} alt={userData.image} />
-        </div>
+            {userData.image && <img src={userData.image} alt={userData.username} />}        </div>
         <p>{formik.errors.username}</p>
         <p>{formik.errors.password}</p>
     </div>
@@ -102,3 +101,10 @@ export const Auth = () => {
 }
 
 export default Auth;
+
+
+// {name?.name && (
+//     <>
+//     <p>{name?.name} is {name?.gender} {name?.probability * 100}% ⚡️</p>
+//     </>
+//   )}

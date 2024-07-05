@@ -13,5 +13,13 @@
     align-content: center;
     background-color: beige;
     gap: 10px;
+}
+
+.output{
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    background-color: rgb(246, 246, 242);
 
 }
