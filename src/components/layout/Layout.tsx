@@ -2,11 +2,8 @@ import { Link, Outlet, useLocation } from 'react-router-dom'
 import styles from './layout.module.css'
 
 export default function Layout() {
-
     const location = useLocation()
     console.log('i am', location.pathname);
-    
-
     return (
         <div className={styles.page}>
             <header className={styles.header}>
@@ -15,6 +12,7 @@ export default function Layout() {
                 <Link to={'/productcard'}>productcard</Link>
                 <Link to={'/auth'}>auth</Link>
                 <Link to={'/myform'}>myform</Link>
+                <p>{location.pathname}</p>
             </header>
             <main className={styles.main}>
                 <Outlet/>

@@ -3,7 +3,7 @@ import { useState } from 'react'
 import * as Yup from "yup"
 import Button from '../button/Button';
 import styles from './auth.module.css'
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 interface IFormValues {
         username: string;
@@ -76,6 +76,8 @@ export const Auth = () => {
   return (
     <div className={styles.container}>
         <h3>Authentication</h3>
+        <Link to={'/'}>home</Link>
+
         <p>emilys, emilyspass</p>
         <form onSubmit={formik.handleSubmit}>
             <input 

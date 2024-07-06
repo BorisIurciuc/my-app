@@ -6,7 +6,6 @@ import LoginForm from './components/loginForm/LoginForm';
 import ProductCard from './components/productCard/ProductCard';
 import Auth from './components/auth/Auth';
 import MyForm from './components/myForm/MyForm';
-import Homework12 from './homeworks/homework12/Homework12';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -24,5 +23,4 @@ root.render(
       </Route>
     </Routes>
   </HashRouter >
-
 );
