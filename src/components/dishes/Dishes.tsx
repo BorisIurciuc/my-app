@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import dishData from "./dishData";
-import DishProps from "../dishProps/DishProps";
+import DishProps from "./dishProps/DishProps";
 import styles from './dishes.module.css'
 interface IIngredient {
     id: number;

@@ -20,6 +20,8 @@ const MyHeader = () => {
                 <header className={styles.header}>
                     <div>
                     <Link to={'/'} className={styles.linkH}>home</Link>
+                    <Link to={'/dishes'} className={styles.linkH}>dishes</Link>
+                    <Link to={'/brotherhood'} className={styles.linkH}>brotherhood</Link>
                     <Link to={'/login-form'} className={styles.linkH}>login form</Link>
                     <Link to={'/productcard'} className={styles.linkH}>productcard</Link>
                     <Link to={'/auth'} className={styles.linkH}>auth</Link>
@@ -32,6 +34,7 @@ const MyHeader = () => {
             <header className={styles.headerVert}>
                 <div>
                 <Link to={'/'} className={styles.linkV}>home</Link>
+                <Link to={'/dishes'} className={styles.linkV}>dishes</Link>
                 <Link to={'/login-form'} className={styles.linkV}>login form</Link>
                 <Link to={'/productcard'} className={styles.linkV}>productcard</Link>
                 <Link to={'/auth'} className={styles.linkV}>auth</Link>

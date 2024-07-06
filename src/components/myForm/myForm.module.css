@@ -1,16 +1,16 @@
 .container{
+    padding: 20px;
+    margin:  50px;
     border: 1px solid;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
     width: 300px;
-    height: 220px;
+    height: 280px;
     border-radius: 10px;
-    background-color: beige;
-}
-.container > input {
-    margin-bottom: 3px;
+    background-color: rgb(248, 248, 246);
+    box-shadow: 5px 5px 10px 5px rgba(48, 48, 48, 0.5);
+
 }
 
 .container > span {

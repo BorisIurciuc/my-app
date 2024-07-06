@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { brotherhood } from "./data";
 import "./style.css";
-import BrotherCard from "../../components/brotherCard/BrotherCard";
+import BrotherCard from "../../components/brotherhood/brotherCard/BrotherCard";
 
 export default function Lesson06() {
   const [brothers, setBrothers] = useState(brotherhood);

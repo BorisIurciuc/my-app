@@ -6,6 +6,8 @@ import LoginForm from './components/loginForm/LoginForm';
 import ProductCard from './components/productCard/ProductCard';
 import Auth from './components/auth/Auth';
 import MyForm from './components/myForm/MyForm';
+import Dishes from './components/dishes/Dishes';
+import BrotherHood from './components/brotherhood/Bratherhood';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -15,6 +17,8 @@ root.render(
     <Routes>
       <Route path='/' element={<Layout/>}>
         <Route path='/' element={<h1>homepage</h1>}/>
+        <Route path='/dishes' element={<Dishes/>}/>
+        <Route path='/brotherhood' element={<BrotherHood/>}/>
         <Route path='/login-form' element={<LoginForm/>}/>
         <Route path='/productcard' element={<ProductCard/>}/>
         <Route path='/auth' element={<Auth/>}/>
