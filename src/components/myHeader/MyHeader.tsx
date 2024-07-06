@@ -1,34 +1,41 @@
 import { useState } from "react";
 
 import styles from "./myHeader.module.css";
+import { Link, useLocation } from "react-router-dom";
 
 const MyHeader = () => {
     const [headerHor] = useState<boolean>(true);
     const [headerVer, setHeaderVer] = useState<boolean>(false);
+    const location = useLocation()
+
 
     const changeToggleVer = () => {
         setHeaderVer((prev) => !prev);
     };
 
     return (
-        <div>
+        <div className={styles.divHaeder}>
+            <p>my location - {location.pathname}</p>
             {headerHor && (
                 <header className={styles.header}>
-                {/* <h3>Lesson10</h3> */}
-                <div>
-                    <a href="/">Home</a>
-                    <a href="/">Info</a>
-                    <a href="/">Profile</a>
-                    <span onClick={changeToggleVer}>≡</span>
-                </div>
+                    <div>
+                    <Link to={'/'} className={styles.linkH}>home</Link>
+                    <Link to={'/login-form'} className={styles.linkH}>login form</Link>
+                    <Link to={'/productcard'} className={styles.linkH}>productcard</Link>
+                    <Link to={'/auth'} className={styles.linkH}>auth</Link>
+                    <Link to={'/myform'} className={styles.linkH}>myform</Link>
+                        <span onClick={changeToggleVer}>≡</span>
+                    </div>
                 </header>
             )}
             {headerVer && (
             <header className={styles.headerVert}>
                 <div>
-                    <a href="/">Home</a>
-                    <a href="/">Info</a>
-                    <a href="/">Profile</a>
+                <Link to={'/'} className={styles.linkV}>home</Link>
+                <Link to={'/login-form'} className={styles.linkV}>login form</Link>
+                <Link to={'/productcard'} className={styles.linkV}>productcard</Link>
+                <Link to={'/auth'} className={styles.linkV}>auth</Link>
+                <Link to={'/myform'} className={styles.linkV}>myform</Link>
                     </div>
                 </header>
             )}
