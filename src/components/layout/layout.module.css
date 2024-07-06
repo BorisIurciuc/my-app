@@ -1,0 +1,40 @@
+.header {
+    width: 100%;
+    background-color: orange;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+    /* на всякий случай */
+    z-index: 10; 
+  }
+
+  header > a {
+    color: white;
+    margin-right: 20px;
+    text-decoration: none;
+  }
+  
+  header > a:hover {
+    text-decoration: underline;
+  }
+
+
+  .main {
+    flex: 1;
+  }
+  
+  .footer {
+    width: 100%;
+    background-color: rgb(194, 194, 194);
+    height: 50px;
+  }
+  
+  .page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+  }

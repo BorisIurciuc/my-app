@@ -3,6 +3,7 @@ import { useState } from 'react'
 import * as Yup from "yup"
 import Button from '../button/Button';
 import styles from './auth.module.css'
+import { useNavigate } from 'react-router-dom';
 
 interface IFormValues {
         username: string;
@@ -28,6 +29,8 @@ const initial: IUserData = {
 }
 
 export const Auth = () => {
+
+    const navigate = useNavigate()
 
     const [userData, setUserData] = useState<IUserData>(initial)
 
@@ -66,6 +69,7 @@ export const Auth = () => {
             const data = await res.json()
             setUserData(data)
             resetForm()
+            navigate('/')
         }
     })
 
