@@ -7,12 +7,11 @@
     display: flex;
     width: 100%;
     flex-direction: column;
-    justify-content: space-around;
     align-items: center;
     background-image: url('../../../public/images/Ferrari-facts-Cover-25-02-420x230.jpg');
-    background-size: cover; /* Изображение охватывает весь блок */
-    background-position: center; /* Центрирование изображения */
-    background-repeat: no-repeat; /* Запрет повторения изображения */
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat;
 }
 
 .containerProduct > h1 {
@@ -20,33 +19,13 @@
     background-color: transparent;
 }
 
-.containerProductYes {
-    width: 60%;
-    border: 1px solid black;
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    text-align: justify;
-    border-radius: 10px;
+.containerProduct > h4 {
+    align-self: center;
+    color: white;
 }
-
-.descriptionProd{
-    margin: 20px 12%;
-}
-
-.containerProductNo {
-    width: 100%;
-    border: 1px solid black;
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    text-align: justify;
-    border-radius: 10px;
-    opacity: 0.4;
+.containerProduct > p{
+    margin: 10px 12%;
+    color: white;
 }
 
 .imgProduct {
@@ -56,6 +35,7 @@
 
 span {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
 }
 
 .availability {

@@ -5,7 +5,7 @@ function ProductCard(){
         cardTitle: "Ferrari 296 GTB",
         cardImage:'https://cdn.motor1.com/images/mgl/OkpwL/s1/ferrari-296-gtb.jpg',
         cardDescription: "Откройте новую эру скорости с Ferrari 296 GTB",
-        availability: true,
+        availability: false,
         thereIs: "Спешите, на складе несколько экземпляров",
         thereNot: "Товара нет на складе"
         }
@@ -13,24 +13,27 @@ function ProductCard(){
     return (
         <div className={styles.containerProduct}>
             <h1>Наши предложения</h1>
-            <div className={productData.availability ? 'containerProductYes' : 'containerProductNo'}>
-                <h2>{productData.cardTitle}</h2>
-                <img src={productData.cardImage} className={styles.imgProduct} alt="ferrari"/>
-                <h4>{productData.cardDescription}</h4>
-                <p className={styles.descriptionProd}>
-                    Позвольте себе ощутить неподдельный восторг от вождения с Ferrari 296 GTB — автомобилем, 
-                    который воплощает в себе сочетание роскоши, инноваций и невероятной динамики.
-                    <br />Инновации и мощь
-                    <br />Ferrari 296 GTB оснащен революционным V6-двигателем с турбонаддувом и гибридной системой, 
-                    которые вместе вырабатывают ошеломляющие 830 лошадиных сил. Благодаря этому автомобиль 
-                    разгоняется до 100 км/ч всего за 2,9 секунды, обеспечивая максимальное удовольствие от вождения.
-                    <br /><b><span>Ваше будущее начинается сейчас.</span></b>
-                </p >
-            </div>
+            <h2>{productData.cardTitle}</h2>
+            <>
+            {productData.availability ? productData.thereIs : productData.thereNot}
+            <img src={productData.cardImage} alt="ferrari" className={styles.imgProduct}/>
+            </>
+                        <h4>{productData.cardDescription}</h4>
+            <p>
+                Позвольте себе ощутить неподдельный восторг от вождения с Ferrari 296 GTB — автомобилем, 
+                который воплощает в себе сочетание роскоши, инноваций и невероятной динамики.
+                <br />Инновации и мощь
+                <br />Ferrari 296 GTB оснащен революционным V6-двигателем с турбонаддувом и гибридной системой, 
+                которые вместе вырабатывают ошеломляющие 830 лошадиных сил. Благодаря этому автомобиль 
+                разгоняется до 100 км/ч всего за 2,9 секунды, обеспечивая максимальное удовольствие от вождения.
+                <br /><b><span>Ваше будущее начинается сейчас.</span></b>
+            </p >
             <div className={styles.availability}>
-                <b><p className={productData.availability ? 'textBlack' : 'textRed'}>
+                <b>
+                    <p className={productData.availability ? styles.textBlack : styles.textRed}>
                     {productData.availability ? productData.thereIs : productData.thereNot}
-                </p></b>
+                    </p>
+                </b>
             </div>
         </div>
     )
