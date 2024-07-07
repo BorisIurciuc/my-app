@@ -13,7 +13,7 @@ interface IImgCat {
   url: string;
 }
 
-export default function Lesson1002() {
+export default function Lesson11() {
   const [factCat, setFactCat] = useState<ICat[]>([]);
   const [imgCat, setImgCat] = useState<IImgCat[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -50,10 +50,9 @@ export default function Lesson1002() {
 
   return (
     <>
-      <MyHeader />
       <section className={styles.mainSection}>
         <div className={styles.container1002}>
-          <h1>Lesson1002</h1>
+          <h1>cat fact</h1>
           {isLoading && <div className={styles.loader}></div>}
           {(!isLoading || imgCat.length > 0) && (
             <div className={styles.containerFactImageCat}>

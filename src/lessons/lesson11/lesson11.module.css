@@ -65,6 +65,10 @@ h1{
     background-color: rgb(240, 239, 239);
 }
 
+.containerFactImageCat > ul > li > p {
+    margin: 5px;
+}
+
 .containerFactImageCat > ol {
     width: 50%;
     list-style: none;
