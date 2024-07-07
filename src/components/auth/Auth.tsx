@@ -4,6 +4,7 @@ import * as Yup from "yup"
 import Button from '../button/Button';
 import styles from './auth.module.css'
 import { Link } from 'react-router-dom';
+import MyInput from '../myInput/MyInput';
 
 interface IFormValues {
         username: string;
@@ -30,9 +31,8 @@ const initial: IUserData = {
 
 export const Auth = () => {
 
-    // const navigate = useNavigate()
-
     const [userData, setUserData] = useState<IUserData>(initial)
+    const [isLoading, setIsLoding] = useState(false)
 
     const schema = Yup.object().shape({
         username: Yup
@@ -69,48 +69,45 @@ export const Auth = () => {
             const data = await res.json()
             setUserData(data)
             resetForm()
+            setIsLoding(true)
             // navigate('/')
         }
     })
 
   return (
     <div className={styles.container}>
-        <h3>Authentication</h3>
-        <Link to={'/'}>home</Link>
-
+        <h1>Authentication</h1>
         <p>emilys, emilyspass</p>
         <form onSubmit={formik.handleSubmit}>
-            <input 
+            <MyInput 
                 type="text"
                 placeholder='username'
-                id='username'
+                name='username'
                 onChange={formik.handleChange}
                 value={formik.values.username}
+                error={formik.errors.username}
             />
-            <input 
+            <MyInput 
                 type="password" 
                 placeholder='password'
-                id='password'
+                name='password'
                 onChange={formik.handleChange}
                 value={formik.values.password}
+                error={formik.errors.password}
             />
             <Button buttonType="submit" buttonText="send" disabled={false} />
             </form>
-        <div className={styles.output}>
-            <p>{userData.username}</p>
-            <p>{userData.firstName}</p>
-            {userData.image && <img src={userData.image} alt={userData.username} />}        </div>
-        <p>{formik.errors.username}</p>
-        <p>{formik.errors.password}</p>
+            {isLoading && 
+                <div className={styles.output}>
+                    <h4>{userData.firstName}</h4>
+                    <p>{userData.username}</p>
+                    <p>{userData.email}</p>
+                    <p>{userData.gender}</p>
+                    {userData.image && <img src={userData.image} alt={userData.username} />}        
+                </div>
+            }
+        <Link to={'/'}>home</Link>
     </div>
   )
 }
-
 export default Auth;
-
-
-// {name?.name && (
-//     <>
-//     <p>{name?.name} is {name?.gender} {name?.probability * 100}% ⚡️</p>
-//     </>
-//   )}

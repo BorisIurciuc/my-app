@@ -1,25 +1,39 @@
 .container {
-    width: 360px;
+    width: 35%;
     display: flex;
     flex-direction: column;
-    align-content: center;
-    background-color: beige;
+    align-items: center;
+    background-color: white;
+
 }
 
 .container > form {
+    padding: 20px;
+    margin: 10px;
+    width: 100%;
     border: 1px solid;
     display: flex;
     flex-direction: column;
-    align-content: center;
-    background-color: beige;
+    align-items: center;
+    background-color: rgb(249, 249, 244);
+    box-shadow: 5px 5px 15px rgb(69, 69, 66);
+
     gap: 10px;
 }
 
 .output{
-    margin: 20px;
+    padding: 20px;
+    margin: 10px;
     display: flex;
     flex-direction: column;
     align-content: center;
     background-color: rgb(246, 246, 242);
+    width: 100%;
+    box-shadow: 5px 5px 15px rgb(69, 69, 66);
+}
 
+.output > img {
+    width: 50%;
+    align-self: center;
+    border: rgb(94, 53, 53);
 }

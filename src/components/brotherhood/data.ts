@@ -1,29 +1,34 @@
-
-
 export const brotherhood = [
+  {
+    id: 1,
+    name: 'Frodo',
+    race: 'hobbit',
+    skills: ['run a household', 'hide', 'be friends'],
+    image: 'https://static.wikia.nocookie.net/pjmidearthfilms/images/3/34/Frodo.jpg'
+  },
     {
-      id: 1,
+      id: 2,
       name: 'Aragorn',
       race: 'human',
       skills: ['master of swards', 'horse rider', 'true king of Middleearth'],
       image: 'https://static.wikia.nocookie.net/lotr/images/b/ba/Anduril.jpg'
     },
     {
-      id: 2,
+      id: 3,
       name: 'Legolas',
       race: 'elf',
       skills: ['archer', 'horse rider', 'magic'],
       image: 'https://static.wikia.nocookie.net/lotr/images/9/95/Legolask.jpg'
     },
     {
-      id: 3,
+      id: 4,
       name: 'Gimli',
       race: 'dwarf',
       skills: ['master of axe', 'master of beer', 'orc killer'],
       image: 'https://static.wikia.nocookie.net/lotr/images/4/43/Gimli.jpg'
     },
     {
-      id: 4,
+      id: 5,
       name: 'Gandalf',
       race: 'mayar',
       skills: ['magic', 'horse rider', 'immortality', 'friend of hobbits'],

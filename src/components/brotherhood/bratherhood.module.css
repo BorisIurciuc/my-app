@@ -1,0 +1,52 @@
+.containerBrotherhood {
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+
+}
+
+.containerBrotherhood > div {
+    width: 40%;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.containerBrotherhood > div > ul {
+    padding: 20px;;
+}
+
+.containerBrotherhood > div > img {
+    width: 75%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.buttonUnaited {
+    position: fixed;
+    top: 110px;
+    right: 10px;
+    width: 200px;
+    height: 100px;
+    background-color: beige;
+}
+
+.buttonUnaited > img {
+    width: 200px;
+}
+
+.buttonUnaited > button {
+    width: 200px;
+    height: 25px;
+    border-radius: 5px;
+    background-color: rgb(230, 214, 131);
+    border: none;
+    cursor: pointer;
+    &:hover{
+        background-color: orange;
+    }
+}
