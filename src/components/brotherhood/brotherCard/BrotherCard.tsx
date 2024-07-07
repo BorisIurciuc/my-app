@@ -53,7 +53,7 @@ export default function BrotherCard({
           {dislike}
         </div>
       </div>
-      <Button onButtonClick={() => deleteCard(brotherProp.id)} />
+      <Button onButtonClick={() => deleteCard(brotherProp.id)} buttonText='delete'/>
     </div>
   );
 }
