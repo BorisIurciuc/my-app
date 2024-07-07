@@ -1,24 +1,32 @@
 import styles from './productCard.module.css'
 
+interface IProductData {
+    cardImage: string;
+    availability: true;
+    thereIs: string;
+    thereNot: string;
+}
+
+const productData: IProductData = {
+    cardImage:'https://cdn.motor1.com/images/mgl/OkpwL/s1/ferrari-296-gtb.jpg',
+    availability: true,
+    thereIs: "Спешите, на складе несколько экземпляров",
+    thereNot: "Товара нет на складе"
+    }
+
 function ProductCard(){
-    const productData = {
-        cardTitle: "Ferrari 296 GTB",
-        cardImage:'https://cdn.motor1.com/images/mgl/OkpwL/s1/ferrari-296-gtb.jpg',
-        cardDescription: "Откройте новую эру скорости с Ferrari 296 GTB",
-        availability: false,
-        thereIs: "Спешите, на складе несколько экземпляров",
-        thereNot: "Товара нет на складе"
-        }
+
+    
 
     return (
         <div className={styles.containerProduct}>
             <h1>Наши предложения</h1>
-            <h2>{productData.cardTitle}</h2>
+            <h4>Ferrari 296 GTB</h4>
             <>
-            {productData.availability ? productData.thereIs : productData.thereNot}
-            <img src={productData.cardImage} alt="ferrari" className={styles.imgProduct}/>
+                <img src={productData.cardImage} alt="ferrari" 
+                className={productData.availability ? styles.imgProductYes :  styles.imgProductNo}/>
             </>
-                        <h4>{productData.cardDescription}</h4>
+            <h4>Откройте новую эру скорости с Ferrari 296 GTB</h4>
             <p>
                 Позвольте себе ощутить неподдельный восторг от вождения с Ferrari 296 GTB — автомобилем, 
                 который воплощает в себе сочетание роскоши, инноваций и невероятной динамики.
