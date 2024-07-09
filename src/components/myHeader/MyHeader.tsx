@@ -19,27 +19,32 @@ const MyHeader = () => {
             {headerHor && (
                 <header className={styles.header}>
                     <div>
-                    <Link to={'/'} className={styles.linkH}>home</Link>
-                    <Link to={'/dishes'} className={styles.linkH}>dishes</Link>
-                    <Link to={'/brotherhood'} className={styles.linkH}>brotherhood</Link>
-                    <Link to={'/catfact'} className={styles.linkH}>catfact</Link>
-                    <Link to={'/productcard'} className={styles.linkH}>productcard</Link>
-                    <Link to={'/auth'} className={styles.linkH}>auth</Link>
-                    <Link to={'/myform'} className={styles.linkH}>myform</Link>
-                        <span onClick={changeToggleVer}>≡</span>
+                        <Link to={'/'} className={styles.linkH}>home</Link>
+                        <Link to={'/dishes'} className={styles.linkH}>dishes</Link>
+                        <Link to={'/brotherhood'} className={styles.linkH}>brotherhood</Link>
+                        <Link to={'/catfact'} className={styles.linkH}>catfact</Link>
+                        <Link to={'/productcard'} className={styles.linkH}>productcard</Link>
+                        <Link to={'/auth'} className={styles.linkH}>auth</Link>
+                        <Link to={'/example'} className={styles.linkH}>example</Link>
+                        <Link to={'/fakeStore'} className={styles.linkH}>fakeStore</Link>
+                        <Link to={'/dummyProduct'} className={styles.linkH}>dummyProduct</Link>
+                    <span onClick={changeToggleVer}>≡</span>
                     </div>
                 </header>
             )}
             {headerVer && (
             <header className={styles.headerVert}>
                 <div>
-                <Link to={'/'} className={styles.linkV}>home</Link>
-                <Link to={'/dishes'} className={styles.linkV}>dishes</Link>
-                <Link to={'/login-form'} className={styles.linkV}>login form</Link>
-                <Link to={'/productcard'} className={styles.linkV}>productcard</Link>
-                <Link to={'/auth'} className={styles.linkV}>auth</Link>
-                <Link to={'/myform'} className={styles.linkV}>myform</Link>
-                    </div>
+                    <Link to={'/'} className={styles.linkV}>home</Link>
+                    <Link to={'/dishes'} className={styles.linkV}>dishes</Link>
+                    <Link to={'/login-form'} className={styles.linkV}>login form</Link>
+                    <Link to={'/productcard'} className={styles.linkV}>productcard</Link>
+                    <Link to={'/auth'} className={styles.linkV}>auth</Link>
+                    <Link to={'/example'} className={styles.linkV}>example</Link>
+                    <Link to={'/fakeStore'} className={styles.linkV}>fakeStore</Link>
+                    <Link to={'/dummyProduct'} className={styles.linkV}>dummyProduct</Link>
+
+                </div>
                 </header>
             )}
         </div>

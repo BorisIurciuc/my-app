@@ -1,5 +1,5 @@
-import Counter from '../../components/counter/Counter'
-import CountArray from '../../components/CountArray/CountArray';
+import Counter from '../../components/example/counter/Counter'
+import CountArray from '../../components/example/CountArray/CountArray';
 
 function Lesson05 () {
     

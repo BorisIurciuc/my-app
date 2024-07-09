@@ -29,17 +29,14 @@
 
 .linkH {
     color: rgb(103, 5, 5);
-    font-size: large;
     text-decoration: none;
-    font-size: x-large;
+    font-size: large;
     font-weight: bold;
     margin-right: 10px;
     &:hover{
         color: white;
         text-decoration: underline;
-
     }
-
 }
 
 .header>div>span {
@@ -53,7 +50,6 @@
 }
 
   /* эти стили начнут срабатывать не устройствах меньше 700px */
-
 .headerVert > div{
     display: none;
 }
@@ -76,7 +72,6 @@
         &:hover{
             color: white;
             text-decoration: underline;
-
         }
     }
 

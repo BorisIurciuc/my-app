@@ -1,6 +1,6 @@
 import React from 'react'
 // import Auth from '../../components/auth/Auth'
-import KnowGender from '../../components/knowGender/KnowGender'
+import KnowGender from '../../components/example/knowGender/KnowGender'
 import MyForm from '../../components/myForm/MyForm'
 
 export default function Lesson13() {

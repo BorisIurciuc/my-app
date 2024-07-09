@@ -1,4 +1,4 @@
-import AnimalCard from '../../components/animalCard/AnimalCard'
+import AnimalCard from '../../components/example/animalCard/AnimalCard'
 import { lionData, zebraData } from "./data"
 import Button from "../../components/button/Button";
 

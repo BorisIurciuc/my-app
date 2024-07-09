@@ -1,0 +1,29 @@
+.container {
+    width: 80%;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    border: solid 1px brown;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.card {
+    padding: 5px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    background-color: rgb(163, 136, 103);
+    
+}
+
+.card > img {
+    width: 200px;
+}
+
+.buttonWrapper {
+    display: flex;
+    justify-content: center;
+}
