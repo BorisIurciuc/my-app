@@ -8,19 +8,33 @@
     padding: 10px;
 }
 
+.container h2 {
+    font-size: 15px;
+    width: 70%;
+}
+
+.container span {
+    font-size: 13px;
+}
+
 .card {
-    padding: 5px;
+    padding: 10px 6px 20px;
     border: 1px solid black;
     display: flex;
     flex-direction: column;
+    justify-content: end;
     align-items: center;
     border-radius: 10px;
-    background-color: rgb(163, 136, 103);
-    
 }
 
 .card > img {
-    width: 200px;
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+}
+
+.card button {
+    margin-bottom: 10px;
 }
 
 .buttonWrapper {

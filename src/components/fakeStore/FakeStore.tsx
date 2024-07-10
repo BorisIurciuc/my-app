@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import styles from './fakeStore.module.css'
 import Button from '../button/Button'
 import { Link } from 'react-router-dom'
+import ProductCardStore from './productCardStore/ProductCardStore'
 
 export interface IProduct {
     id: number,
@@ -43,10 +44,10 @@ useEffect(() => {
                     <span>{product.category}</span> */}
                     <img src={product.image} alt={product.title} />
                     <div className='buttonWrapper'>
+                    <Link to={String(product.id)}><ProductCardStore id={product.id} title={product.title} price={product.price}/></Link>
                     <Link to={String(product.id)}><Button buttonText='to product'></Button></Link>
                     </div>
 
-                    
                 </div>
             ))}
         </div>

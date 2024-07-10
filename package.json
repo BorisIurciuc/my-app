@@ -26,6 +26,7 @@
     "yup": "^1.4.0"
   },
   "scripts": {
+    "lasy": "git add . && git commit -m 'update component' && git push origin main",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

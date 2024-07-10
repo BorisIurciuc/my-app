@@ -20,6 +20,12 @@
     align-items: center;
 }
 
+/* .useContext{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+} */
+
 .header > div {
     width: 100%;
     display: flex;

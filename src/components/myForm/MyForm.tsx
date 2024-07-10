@@ -1,10 +1,11 @@
 import { useFormik } from "formik";
-import { FC } from "react";
+import { FC, useContext } from "react";
 import styles from "./myForm.module.css";
 import * as Yup from "yup";
 import Button from "../button/Button";
 import { useNavigate } from "react-router-dom";
 import MyInput from "../myInput/MyInput";
+import { UserContext } from "../userContext/UserContext";
 
 interface IFormValues {
   firstName: string;
@@ -27,6 +28,9 @@ const schema = Yup.object().shape({
 });
 
 const MyForm: FC = () => {
+
+  const {setUser} = useContext(UserContext)
+
   const navigate = useNavigate();
 
   const formik = useFormik({
@@ -41,6 +45,7 @@ const MyForm: FC = () => {
     onSubmit: (values: IFormValues) => {
       console.log(values);
       navigate("/");
+      setUser(values)
     },
   });
   console.log(formik);

@@ -1,9 +1,12 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 
 import styles from "./myHeader.module.css";
 import { Link, useLocation } from "react-router-dom";
+import { UserContext } from "../userContext/UserContext";
 
 const MyHeader = () => {
+
+    const { user } = useContext(UserContext)
     const [headerHor] = useState<boolean>(true);
     const [headerVer, setHeaderVer] = useState<boolean>(false);
     const location = useLocation()
@@ -18,6 +21,10 @@ const MyHeader = () => {
             <p>my location - {location.pathname}</p>
             {headerHor && (
                 <header className={styles.header}>
+                    <span>{user.firstName}</span>
+                    <span>{user.lastName}</span>
+                    <span>{user.email}</span>
+
                     <div>
                         <Link to={'/'} className={styles.linkH}>home</Link>
                         <Link to={'/dishes'} className={styles.linkH}>dishes</Link>
@@ -25,7 +32,7 @@ const MyHeader = () => {
                         <Link to={'/catfact'} className={styles.linkH}>catfact</Link>
                         <Link to={'/productcard'} className={styles.linkH}>productcard</Link>
                         <Link to={'/auth'} className={styles.linkH}>auth</Link>
-                        <Link to={'/example'} className={styles.linkH}>example</Link>
+                        <Link to={'/myform'} className={styles.linkH}>myform</Link>
                         <Link to={'/fakeStore'} className={styles.linkH}>fakeStore</Link>
                         <Link to={'/dummyProduct'} className={styles.linkH}>dummyProduct</Link>
                     <span onClick={changeToggleVer}>≡</span>

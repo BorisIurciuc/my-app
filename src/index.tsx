@@ -7,17 +7,21 @@ import Auth from "./components/auth/Auth";
 import Dishes from "./components/dishes/Dishes";
 import BrotherHood from "./components/brotherhood/Bratherhood";
 import Lesson11 from "./lessons/lesson11/Lesson11";
-import Example from "./components/example/Example";
+// import Example from "./components/example/Example";
 import Home from "./components/home/Home";
 import FakeStore from "./components/fakeStore/FakeStore";
 import Product from "./components/fakeStore/product/Product";
 import DummyProduct from "./components/dummyProduct/DummyProduct";
 import DummyProductSelect from "./components/dummyProduct/dummyProductSelect/DummyProductSelect";
+import { UserProvider } from "./components/userContext/UserContext";
+import MyForm from "./components/myForm/MyForm";
+import ProductCardStore from "./components/fakeStore/productCardStore/ProductCardStore";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 root.render(
+  <UserProvider >
   <HashRouter>
     <Routes>
       <Route path="/" element={<Layout />}>
@@ -27,14 +31,15 @@ root.render(
         <Route path="/catfact" element={<Lesson11 />} />
         <Route path="/productcard" element={<ProductCard />} />
         <Route path="/auth" element={<Auth />} />
-        <Route path="/example" element={<Example />} />
+        <Route path="/myform" element={<MyForm />} />
         <Route path={"/fakeStore"} element={<FakeStore />} />
         <Route path={"/fakeStore/:id"} element={<Product />} />
         <Route path="*" element={<h1>Error 404</h1>} />
         <Route path={"/dummyProduct"} element={<DummyProduct />} />
         <Route path={"/dummyProduct/:id"} element={<DummyProductSelect />} />
-        
+        <Route path={"/productCardStore"} element={<ProductCardStore id={0} title={""} price={0} />} />
       </Route>
     </Routes>
   </HashRouter>
+  </UserProvider>
 );
