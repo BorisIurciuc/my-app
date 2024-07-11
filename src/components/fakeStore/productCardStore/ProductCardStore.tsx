@@ -1,19 +1,25 @@
-import React, { useEffect } from 'react'
+import { Link } from 'react-router-dom';
+import Button from '../../button/Button';
+import styles from './productCard.module.css';
 
-interface ProductCardProps {
-    id: number
-    title: string;
-    price: number;
+interface IProductCardProps {
+  id: number;
+  title: string;
+  price: number;
+  image: string;
 }
 
-export default function ProductCardStore({id, title, price}: ProductCardProps) {
-
+export default function ProductCardStore({ id, title, price, image }: IProductCardProps) {
   return (
-    <div>
-        ProductCardStore
-        <p>{id}</p>
-        <h2>{title}</h2>
-        <span>{price}</span>
+    <div key={id} className={styles.card}>
+      <h2>{title}</h2>
+      <span>${price}</span>
+      <img src={image} alt={title} />
+      <div className={styles.buttonWrapper}>
+        <Link to={String(id)}>
+          <Button buttonText="to product" />
+        </Link>
+      </div>
     </div>
-  )
+  );
 }

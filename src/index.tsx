@@ -15,7 +15,6 @@ import DummyProduct from "./components/dummyProduct/DummyProduct";
 import DummyProductSelect from "./components/dummyProduct/dummyProductSelect/DummyProductSelect";
 import { UserProvider } from "./components/userContext/UserContext";
 import MyForm from "./components/myForm/MyForm";
-import ProductCardStore from "./components/fakeStore/productCardStore/ProductCardStore";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -37,7 +36,6 @@ root.render(
         <Route path="*" element={<h1>Error 404</h1>} />
         <Route path={"/dummyProduct"} element={<DummyProduct />} />
         <Route path={"/dummyProduct/:id"} element={<DummyProductSelect />} />
-        <Route path={"/productCardStore"} element={<ProductCardStore id={0} title={""} price={0} />} />
       </Route>
     </Routes>
   </HashRouter>

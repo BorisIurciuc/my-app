@@ -21,10 +21,11 @@ const MyHeader = () => {
             <p>my location - {location.pathname}</p>
             {headerHor && (
                 <header className={styles.header}>
-                    <span>{user.firstName}</span>
-                    <span>{user.lastName}</span>
-                    <span>{user.email}</span>
-
+                    <section>
+                        <p>{user.firstName}</p>
+                        <p>{user.lastName}</p>
+                        <p>{user.email}</p>
+                    </section>
                     <div>
                         <Link to={'/'} className={styles.linkH}>home</Link>
                         <Link to={'/dishes'} className={styles.linkH}>dishes</Link>

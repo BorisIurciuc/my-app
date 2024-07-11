@@ -17,7 +17,7 @@
     font-size: 13px;
 }
 
-/* .card {
+.card {
     padding: 10px 6px 20px;
     border: 1px solid black;
     display: flex;
@@ -25,7 +25,7 @@
     justify-content: end;
     align-items: center;
     border-radius: 10px;
-} */
+}
 
 .card > img {
     width: 150px;
