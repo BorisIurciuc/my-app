@@ -14,39 +14,3 @@
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     border-radius: 10px;
 }
-
-.containerProductDummy > ul > li {
-    padding: 10px;
-    background-color: whitesmoke;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.5);
-
-}
-
-.containerProductDummy > ul > li > h4{
-    /* box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.5); */
-    width: 100%;
-    margin: 10px;
-    padding: 3px;
-    background-color: rgb(241, 241, 164);
-    text-align: center;
-    margin: 10px;
-    border: 0.5px solid gray;
-    border-radius: 10px;
-}
-
-.containerProductDummy > ul > li > img{
-    /* box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.5); */
-    margin: 10px;
-    border: 0.5px solid gray;
-    border-radius: 10px;
-
-}
-
-
-.containerProductDummy > ul > li > p{
-    color: red;
-}

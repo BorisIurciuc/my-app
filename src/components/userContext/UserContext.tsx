@@ -4,6 +4,7 @@ interface IFormValues {
         firstName: string;
         lastName: string;
         email: string;
+        age: string
 }
 
 interface IUserContext {
@@ -19,7 +20,8 @@ const initialContext: IUserContext = {
     user: {
         firstName: '',
         lastName: '',
-        email: ''
+        email: '',
+        age: ''
     },
     setUser: () => {}
 }
@@ -31,8 +33,8 @@ export function UserProvider({children}: IUserProviderProps) {
     const [user, setUser] = useState({
         firstName: '',
         lastName: '',
-        email: ''
-
+        email: '',
+        age: ''
     })
 
     return (

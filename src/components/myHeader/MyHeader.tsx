@@ -1,5 +1,4 @@
 import { useContext, useState } from "react";
-
 import styles from "./myHeader.module.css";
 import { Link, useLocation } from "react-router-dom";
 import { UserContext } from "../userContext/UserContext";
@@ -10,7 +9,6 @@ const MyHeader = () => {
     const [headerHor] = useState<boolean>(true);
     const [headerVer, setHeaderVer] = useState<boolean>(false);
     const location = useLocation()
-
 
     const changeToggleVer = () => {
         setHeaderVer((prev) => !prev);
@@ -25,6 +23,7 @@ const MyHeader = () => {
                         <p>{user.firstName}</p>
                         <p>{user.lastName}</p>
                         <p>{user.email}</p>
+                        <p>{user.age}</p>
                     </section>
                     <div>
                         <Link to={'/'} className={styles.linkH}>home</Link>
