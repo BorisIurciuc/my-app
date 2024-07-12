@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import styles from "./myHeader.module.css";
 import { Link, useLocation } from "react-router-dom";
 import { UserContext } from "../userContext/UserContext";
+// import { link } from './link'
 
 const MyHeader = () => {
 
