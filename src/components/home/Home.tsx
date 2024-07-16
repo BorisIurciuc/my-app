@@ -1,10 +1,12 @@
 import { useContext } from 'react'
 import styles from './home.module.css'
 import { UserContext } from '../userContext/UserContext'
+import { useAppSelector } from '../../app/hooks'
 
 
 
 export default function Home() {
+  const {products, isLoading, error} = useAppSelector(store => store.reduxProducts)
 
   const { user } = useContext(UserContext)
 
@@ -25,7 +27,8 @@ export default function Home() {
         <div className={styles.containerHome03}>
           2
         </div>
-
+        {products && <div>{products[0]?.title}</div>
+        }
     </div>
     </>
 

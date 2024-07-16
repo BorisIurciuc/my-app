@@ -36,6 +36,9 @@ const MyHeader = () => {
                         <Link to={'/myform'} className={styles.linkH}>myform</Link>
                         <Link to={'/fakeStore'} className={styles.linkH}>fakeStore</Link>
                         <Link to={'/dummyProduct'} className={styles.linkH}>dummyProduct</Link>
+                        <Link to={'/reduxProducts'} className={styles.linkH}>reduxProducts</Link>
+                        <Link to={'/reduxDumProd'} className={styles.linkH}>reduxDumProd</Link>
+
                     <span onClick={changeToggleVer}>≡</span>
                     </div>
                 </header>

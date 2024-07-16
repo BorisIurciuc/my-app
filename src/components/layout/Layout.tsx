@@ -4,7 +4,7 @@ import MyHeader from '../myHeader/MyHeader';
 
 export default function Layout() {
     const location = useLocation()
-    console.log('i am', location.pathname);
+    console.log('i am from Layout', location.pathname);
     return (
         <div className={styles.page}>
             <MyHeader />

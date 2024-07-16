@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import styles from "./lesson11.module.css";
 import { v4 } from "uuid";
 import Button from "../../components/button/Button";
-import MyHeader from "../../components/myHeader/MyHeader";
+// import MyHeader from "../../components/myHeader/MyHeader";
 import MyCatFactInputForm from "../../components/myCatFactInputForm/MyCatFactInputForm";
 
 interface ICat {

@@ -45,7 +45,6 @@ export const Auth = () => {
             .required('this field is required')
             .min(2, 'field password minimum 2 sympols')
             .max(20, 'minimum 20 sympols'),
-    
     })
     
     const formik = useFormik({

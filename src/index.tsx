@@ -15,11 +15,16 @@ import DummyProduct from "./components/dummyProduct/DummyProduct";
 import DummyProductSelect from "./components/dummyProduct/dummyProductSelect/DummyProductSelect";
 import { UserProvider } from "./components/userContext/UserContext";
 import MyForm from "./components/myForm/MyForm";
+import ReduxProducts from "./features/reduxProducts/ReduxProducts";
+import { Provider } from "react-redux";
+import { store } from "./app/store";
+import ReduxDummyProd from "./features/reduxDummyProd/ReduxDummyProd";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 root.render(
+  <Provider store={store}>
   <UserProvider >
   <HashRouter>
     <Routes>
@@ -36,8 +41,12 @@ root.render(
         <Route path="*" element={<h1>Error 404</h1>} />
         <Route path={"/dummyProduct"} element={<DummyProduct />} />
         <Route path={"/dummyProduct/:id"} element={<DummyProductSelect />} />
+        <Route path={"/reduxProducts"} element={<ReduxProducts />} />
+        <Route path={"/reduxDumProd"} element={<ReduxDummyProd />} />
+
       </Route>
     </Routes>
   </HashRouter>
   </UserProvider>
+  </Provider>
 );
