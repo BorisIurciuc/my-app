@@ -1,4 +1,4 @@
-import { configureStore, ThunkAction, Action } from "@reduxjs/toolkit"
+import {  ThunkAction, Action, configureStore } from "@reduxjs/toolkit"
 import reduxProductsSlice from "../features/reduxProducts/reduxProductsSlice"
 import ReduxDummyProdSlice from "../features/reduxDummyProd/ReduxDummyProdSlice"
 

@@ -19,6 +19,6 @@ export default function ReduxProducts() {
             <p>{el.title}</p>
         ])}
         {error && <p style={{color: 'red'}}>{error}</p>}
-    </div>
+    </div> 
   )
 }
